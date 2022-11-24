@@ -8,7 +8,7 @@ import sys
 Usage:
     cat a | xargs -I{} sh -c './permutate_3_key_combos.py ./simultaneous/LAYOUT.tsv {}'
 where `a` is in following format:
-[a-z]{3,3} HIRAGANA
+[a-z]{3,4} HIRAGANA
 '''
 
 
@@ -23,7 +23,7 @@ def main(args):
         if(re.search('{!}', line)):
             continue
         blocks = line.split('\t')
-        if(not re.search('^[a-z]$', blocks[0])):
+        if(not re.search('^[a-z;:]$', blocks[0])):
             continue
         if(len(blocks) == 3):  # include pending..
             input_to_pending_dict[blocks[0]] = blocks[2]
