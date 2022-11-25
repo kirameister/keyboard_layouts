@@ -47,17 +47,32 @@ def main(args):
                     eprint(f'There are multiple lines with the identical input "{cs}". The latter will be taken.')
             strokes_to_hiragana_dict_in_list[len(cs)-1][cs] = hiragana
     # call the recursive function for each of the
-    print(strokes_to_hiragana_dict_in_list)
+    # print(strokes_to_hiragana_dict_in_list)
     # build up the target table bottom-up (naively)..
-    for i,v in enumerate(strokes_to_hiragana_dict_in_list):
-        if(i == 0): # goofy implementation..
+    for i, v in enumerate(strokes_to_hiragana_dict_in_list):
+        if(i == 0):  # goofy implementation..
             continue
         for inp, hiragana in v.items():
             prev_str = inp[0:-1]
             curr_chr = inp[-1]
             if(prev_str in strokes_to_hiragana_dict_in_list[i-1]):
                 target_table[i][strokes_to_hiragana_dict_in_list[i-1][prev_str] + curr_chr] = hiragana
-    print(target_table)
+                if(len(prev_str) == 1 and prev_str not in target_table[0]):
+                    target_table[0][prev_str] = strokes_to_hiragana_dict_in_list[0][prev_str]
+    # print(target_table)
+    # printing the output
+    # first sipmly the original TSV contents
+    print('# original TSV file minus the entries in the pending..')
+    for k, v in strokes_to_hiragana_dict_in_list[0].items():
+        if(k in target_table[0]):
+            continue
+        else:
+            print(f'{k}\t{v}')
+    # and then print out the rest..
+    print('# set of the entries required for simultaneous key-combos..')
+    for i, list_element in enumerate(target_table):
+        for k, v in list_element.items():
+            print(f'{k}\t\t{v}')
 
 
 if __name__ == '__main__':
