@@ -46,9 +46,8 @@ def main(args):
                 if(cs in strokes_to_hiragana_dict_in_list[i]):
                     eprint(f'There are multiple lines with the identical input "{cs}". The latter will be taken.')
             strokes_to_hiragana_dict_in_list[len(cs)-1][cs] = hiragana
-    # call the recursive function for each of the
-    # print(strokes_to_hiragana_dict_in_list)
     # build up the target table bottom-up (naively)..
+    invalidated_flag = False
     for i, v in enumerate(strokes_to_hiragana_dict_in_list):
         if(i == 0):  # goofy implementation..
             continue
@@ -58,9 +57,17 @@ def main(args):
             if(prev_str in strokes_to_hiragana_dict_in_list[i-1]):
                 target_table[i][strokes_to_hiragana_dict_in_list[i-1][prev_str] + curr_chr] = hiragana
                 if(len(prev_str) == 1 and prev_str not in target_table[0]):
+                    # this is required for only listing the required set of chars in the pending set
                     target_table[0][prev_str] = strokes_to_hiragana_dict_in_list[0][prev_str]
-    # print(target_table)
-    # printing the output
+            elif(len(prev_str) == 1):
+                eprint(f'[WARN] There is no definition for the input "{prev_str}", which is required for "{inp}" => "{hiragana}, but since len({prev_str}) is 1, required entry will be added"')
+                target_table[0][prev_str] = prev_str
+            else:  # there is no match for prev_str, which should actually been defined
+                eprint(f'[ERROR] There is no definition for the input "{prev_str}", which is required for "{inp}" => "{hiragana}"')
+                invalidated_flag = True
+    if(invalidated_flag):
+        sys.exit(1)
+    # printing the output..
     # first sipmly the original TSV contents
     print('# original TSV file minus the entries in the pending..')
     for k, v in strokes_to_hiragana_dict_in_list[0].items():
@@ -71,8 +78,12 @@ def main(args):
     # and then print out the rest..
     print('# set of the entries required for simultaneous key-combos..')
     for i, list_element in enumerate(target_table):
+        pended_output_set = set()
         for k, v in list_element.items():
+            pended_output_set.add(v)
             print(f'{k}\t\t{v}')
+        for v in pended_output_set:
+            print(v + '{!}\t' + v)
 
 
 if __name__ == '__main__':
