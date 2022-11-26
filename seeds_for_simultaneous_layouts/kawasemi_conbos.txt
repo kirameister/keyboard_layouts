@@ -3,7 +3,7 @@ au にょ
 ai にゅ
 ao にゃ
 ah ね
-### aj の
+aj の
 ak ぬ
 al に
 a; な
@@ -24,7 +24,7 @@ sh け
 sj こ
 sk く
 sl き
-### s; か
+s; か
 sn けん
 sm こん
 s, くん
@@ -39,7 +39,7 @@ do しゃ
 dh せ
 dj そ
 dk す
-### dl し
+dl し
 d; さ
 dn せん
 dm そん
@@ -57,7 +57,7 @@ fi ちゅ
 fo ちゃ
 fp つぁ
 fh て
-### fj と
+fj と
 fk つ
 fl ち
 f; た
@@ -79,7 +79,7 @@ gh へ
 gj ほ
 gk ふ
 gl ひ
-### g; は
+g; は
 gn へん
 gm ほん
 g, ふん
@@ -91,7 +91,7 @@ xi りゅ
 xo りゃ
 xh れ
 xj ろ
-### xk る
+xk る
 xl り
 x; ら
 xn れん
@@ -107,7 +107,7 @@ ch め
 cj も
 ck む
 cl み
-### c; ま
+c; ま
 cn めん
 cm もん
 c, むん
@@ -152,8 +152,8 @@ qk ぅ
 ql ぃ
 q; ぁ
 qn ゑ
-### q, 、
-### q. 。
+q, 、
+q. 。
 q/ ヵ
 ### [W][が行]
 w7 ぐぉ
@@ -168,7 +168,7 @@ wh げ
 wj ご
 wk ぐ
 wl ぎ
-### w; が
+w; が
 wn げん
 wm ごん
 w, ぐん
@@ -183,7 +183,7 @@ eo じゃ
 eh ぜ
 ej ぞ
 ek ず
-### el じ
+el じ
 e; ざ
 en ぜん
 em ぞん
@@ -197,7 +197,7 @@ ry ぢぇ
 ru ぢょ
 ri でゅ
 ro ぢゃ
-### rh で
+rh で
 rj ど
 rk づ
 rl ぢ
@@ -220,7 +220,7 @@ th べ
 tj ぼ
 tk ぶ
 tl び
-### t; ば
+t; ば
 tn べん
 tm ぼん
 t, ぶん
