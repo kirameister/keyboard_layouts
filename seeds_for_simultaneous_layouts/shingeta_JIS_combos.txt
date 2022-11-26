@@ -117,9 +117,15 @@ o4 ぴょ
 ###  同手同時押し
 rf ・
 rg ・
-hu ／
+hu /
 fg 「」
 hj （）
-fv ！
-fb ！
-nj ？
+fv !
+fb !
+nj ?
+#### Google IME に元々あったエントリーの流用
+z. …
+jz ↓
+hz ←
+zm →
+zn ↑
