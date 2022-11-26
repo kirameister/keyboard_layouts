@@ -14,22 +14,30 @@ def eprint(*args, **kwargs):
 
 
 def store_lines_to_dict_list(ascii_to_hiragana_table, lines, delimiter):
+    return_value = True
     for line in lines:
         if(re.search('^###', line)):  # ignore the comment lines
             continue
         line = line.rstrip()
         [input_str, hiragana] = line.split(delimiter)
-        if(len(input_str) > max_combo_len):
+        input_len = len(input_str)
+        if(input_len > max_combo_len):
             eprint(f'Length of input "{input_str}" in the line "{line}" is greater than {max_combo_len}. This line will be ignored.')
             continue
-        ascii_to_hiragana_table[len(input_str)-1][input_str] = hiragana
+        # first write the original input combo
+        if(input_str in ascii_to_hiragana_table[input_len-1] and hiragana != ascii_to_hiragana_table[input_len-1][input_str]):
+            eprint(f'Conflicting input found for "{input_str}" => "{hiragana}" OR "{ascii_to_hiragana_table[input_len -1][input_str]}"')
+            return_value = False
+        ascii_to_hiragana_table[input_len-1][input_str] = hiragana
         permutated_combos = list(itertools.permutations(list(input_str)))
         for permued_combo in permutated_combos:
             permued_combo = "".join(permued_combo)
-            for i in range(len(ascii_to_hiragana_table)):
-                if(permued_combo in ascii_to_hiragana_table[i] and hiragana != ascii_to_hiragana_table[i][permued_combo]):
-                    eprint(f'There are multiple lines with the identical input "{permued_combo}". The latter will be taken.')
+            if(permued_combo in ascii_to_hiragana_table[input_len-1] and hiragana != ascii_to_hiragana_table[input_len-1][permued_combo]):
+                eprint(f'Conflicting input found for "{permued_combo}" => "{hiragana}" OR "{ascii_to_hiragana_table[input_len -1][input_str]}"')
+                return_value = False
+                continue
             ascii_to_hiragana_table[len(permued_combo)-1][permued_combo] = hiragana
+    return return_value
 
 
 def update_table_for_single_strokes(ascii_to_hiragana_table):
@@ -63,9 +71,13 @@ def main(args):
     with open(args.tsv_file) as f:
         tsv_lines = f.readlines()
     # store tsv inputs to dict
-    store_lines_to_dict_list(ascii_to_hiragana_table, tsv_lines, '\t')
+    sanity_checked = True
+    sanity_checked &= store_lines_to_dict_list(ascii_to_hiragana_table, tsv_lines, '\t')
     # store 2-to-4-combo inputs to respective dicts
-    store_lines_to_dict_list(ascii_to_hiragana_table, key_combo_lines, ' ')
+    sanity_checked &= store_lines_to_dict_list(ascii_to_hiragana_table, key_combo_lines, ' ')
+    if(not sanity_checked and not args.aggressive):
+        eprint('There was at least one conflicting input. Please revise the combo txt file or consider using --aggressive option')
+        sys.exit(1)
     # update the ascii_to_hiragana table s.t. required 1-char input will be present
     update_table_for_single_strokes(ascii_to_hiragana_table)
     # build up the target table bottom-up (naively)..
@@ -108,6 +120,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Permutate 2-to-4-key combos for a given stroke inputs and output with 1-key input')
+    parser.add_argument('-a', '--aggressive', action='store_true', help='take the original combo when in conflict over permuted combos and proceed')
     parser.add_argument('tsv_file', help='Path to the TSV file where roman table with seeding 1-key inputs are contained')
     parser.add_argument('input_key_combo_file', help='Path to the text file where ASCII-key combos and output Hiragana are split by a space')
     args = parser.parse_args()
