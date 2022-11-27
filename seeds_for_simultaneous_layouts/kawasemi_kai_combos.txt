@@ -1,0 +1,388 @@
+### 展開後に以下のエントリーの出力を pending から output に移す必要あり
+### 、q		、
+### 。q		。
+### あc		ま
+### あg		は
+### あs		か
+### あt		ば
+### あw		が
+### いa		に
+### いd		し
+### いe		じ
+### うx		る
+### えf		て
+### えr		で
+### えx		れ
+### おa		の
+### おf		と
+### か;		か
+### が;		が
+### しl		し
+### じl		じ
+### でh		で
+### とh		て
+### とj		と
+### に,		、
+### に.		。
+### のj		の
+### のl		に
+### は;		は
+### ば;		ば
+### ま;		ま
+### るh		れ
+### るk		る
+### [A][な行]
+au にょ
+ai にゅ
+ao にゃ
+ah ね
+aj の
+ak ぬ
+al に
+a; な
+an ねん
+am のん
+a, ぬん
+a. にん
+a/ なん
+### [S][か行]
+s7 くぉ
+s9 くぃ
+sy くぇ
+su きょ
+si きゅ
+so きゃ
+sp くぁ
+sh け
+sj こ
+sk く
+sl き
+s; か
+sn けん
+sm こん
+s, くん
+s. きん
+s/ かん
+### [D][さ行]
+d9 すぃ
+dy しぇ
+du しょ
+di しゅ
+do しゃ
+dh せ
+dj そ
+dk す
+dl し
+d; さ
+dn せん
+dm そん
+d, すん
+d. しん
+d/ さん
+### [F][た行]
+f6 つぇ
+f7 つぉ
+f8 とぅ
+f9 てぃ
+fy ちぇ
+fu ちょ
+fi ちゅ
+fo ちゃ
+fp つぁ
+fh て
+fj と
+fk つ
+fl ち
+f; た
+fn てん
+fm とん
+f, つん
+f. ちん
+f/ たん
+### [G][は行]
+g7 ふぉ
+g8 ふゅ
+g9 ふぃ
+gy ふぇ
+gu ひょ
+gi ひゅ
+go ひゃ
+gp ふぁ
+gh へ
+gj ほ
+gk ふ
+gl ひ
+g; は
+gn へん
+gm ほん
+g, ふん
+g. ひん
+g/ はん
+### [X][ら行]
+xu りょ
+xi りゅ
+xo りゃ
+xh れ
+xj ろ
+xk る
+xl り
+x; ら
+xn れん
+xm ろん
+x, るん
+x. りん
+x/ らん
+### [C][ま行]
+cu みょ
+ci みゅ
+co みゃ
+ch め
+cj も
+ck む
+cl み
+c; ま
+cn めん
+cm もん
+c, むん
+c. みん
+c/ まん
+### [V][記号]
+vy 『』
+vu 「」
+vi （）
+vo 【】
+vp 〈〉
+vj ・
+vk …
+vl ／
+v; 《》
+v, ，
+v. ．
+### [B][ぱ行]
+bu ぴょ
+bi ぴゅ
+bo ぴゃ
+bh ぺ
+bj ぽ
+bk ぷ
+bl ぴ
+b; ぱ
+bn ぺん
+bm ぽん
+b, ぷん
+b. ぴん
+b/ ぱん
+### [Q][捨て仮名、旧かな]
+q9 ゐ
+qy ヶ
+qu ょ
+qi ゅ
+qo ゃ
+qp ゎ
+qh ぇ
+qj ぉ
+qk ぅ
+ql ぃ
+q; ぁ
+qn ゑ
+q, 、
+q. 。
+q/ ヵ
+### [W][が行]
+w7 ぐぉ
+w9 ぐぃ
+w0 ぐゎ
+wy ぐぇ
+wu ぎょ
+wi ぎゅ
+wo ぎゃ
+wp ぐぁ
+wh げ
+wj ご
+wk ぐ
+wl ぎ
+w; が
+wn げん
+wm ごん
+w, ぐん
+w. ぎん
+w/ がん
+### [E][ざ行]
+e9 ずぃ
+ey じぇ
+eu じょ
+ei じゅ
+eo じゃ
+eh ぜ
+ej ぞ
+ek ず
+el じ
+e; ざ
+en ぜん
+em ぞん
+e, ずん
+e. じん
+e/ ざん
+### [R][だ行]
+r8 どぅ
+r9 でぃ
+ry ぢぇ
+ru ぢょ
+ri でゅ
+ro ぢゃ
+rh で
+rj ど
+rk づ
+rl ぢ
+r; だ
+rn でん
+rm どん
+r, づん
+r. ぢん
+r/ だん
+### [T][ば行]
+t7 ヴォ
+t8 ヴュ
+t9 ヴィ
+ty ヴェ
+tu びょ
+ti びゅ
+to びゃ
+tp ヴァ
+th べ
+tj ぼ
+tk ぶ
+tl び
+t; ば
+tn べん
+tm ぼん
+t, ぶん
+t. びん
+t/ ばん
+### [L]
+lk うう
+l; あい
+### [L;][あい]
+l;w がい
+l;e ざい
+l;r だい
+l;t ばい
+l;a ない
+l;s かい
+l;d さい
+l;f たい
+l;g はい
+l;x らい
+l;c まい
+l;b ぱい
+### [KL][うう]
+klw ぐう
+kle ずう
+klr づう
+klt ぶう
+kla ぬう
+kls くう
+kld すう
+klf つう
+klg ふう
+klx るう
+klc むう
+klb ぷう
+### [J]
+jh えい
+jk おう
+### [JK][おう]
+jkw ごう
+jke ぞう
+jkr どう
+jkt ぼう
+jka のう
+jks こう
+jkd そう
+jkf とう
+jkg ほう
+jkx ろう
+jkc もう
+jkb ぽう
+### [HJ][えい]
+hjw げい
+hje ぜい
+hjr でい
+hjt べい
+hja ねい
+hjs けい
+hjd せい
+hjf てい
+hjg へい
+hjx れい
+hjc めい
+hjb ぺい
+### [O]
+io ゆう
+op いい
+### [OP][いい]
+opw ぎい
+pe をじ noperm
+ep じを noperm
+ope じい
+pr をで noperm
+rp でを noperm
+opr ぢい
+opt びい
+pa をの noperm
+ap のを noperm
+opa にい
+ops きい
+pd をし noperm
+dp しを noperm
+opd しい
+opf ちい
+opg ひい
+px をる noperm
+xp るを noperm
+opx りい
+pc をま noperm
+cp まを noperm
+opc みい
+pb をわ noperm
+bp わを noperm
+opb ぴい
+### [IO][ゅう]
+iow ぎゅう
+ioe じゅう
+ior でゅう
+iot びゅう
+ioa にゅう
+ios きゅう
+iod しゅう
+iof ちゅう
+iog ひゅう
+iox りゅう
+ioc みゅう
+iob ぴゅう
+### [U]
+ui よう
+### [UI][ょう]
+uiw ぎょう
+uie じょう
+uir ぢょう
+uit びょう
+uia にょう
+uis きょう
+uid しょう
+uif ちょう
+uig ひょう
+uix りょう
+uic みょう
+uib ぴょう
+### [YU][ぇい]
+yu れよ noperm
+uy よれ noperm
+yuw ぐぇい
+yue じぇい
+yur ぢぇい
+yut ゔぇい
+yus くぇい
+yud しぇい
+yuf ちぇい
+yug ふぇい
