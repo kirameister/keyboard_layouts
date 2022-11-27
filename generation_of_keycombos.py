@@ -19,7 +19,12 @@ def store_lines_to_dict_list(ascii_to_hiragana_table, lines, delimiter):
         if(re.search('^###', line)):  # ignore the comment lines
             continue
         line = line.rstrip()
-        [input_str, hiragana] = line.split(delimiter)
+        input_option = None
+        unpacked = line.split(delimiter)
+        if(len(unpacked) == 3):
+            input_option = unpacked[2]
+        input_str = unpacked[0]
+        hiragana = unpacked[1]
         input_len = len(input_str)
         if(input_len > max_combo_len):
             eprint(f'Length of input "{input_str}" in the line "{line}" is greater than {max_combo_len}. This line will be ignored.')
@@ -29,6 +34,9 @@ def store_lines_to_dict_list(ascii_to_hiragana_table, lines, delimiter):
             eprint(f'Conflicting input found for "{input_str}" => "{hiragana}" OR "{ascii_to_hiragana_table[input_len -1][input_str]}"')
             return_value = False
         ascii_to_hiragana_table[input_len-1][input_str] = hiragana
+        # go to the next input if no-perm option is given
+        if(input_option is not None and re.search('no-?perm', input_option)):
+            continue
         permutated_combos = list(itertools.permutations(list(input_str)))
         for permued_combo in permutated_combos:
             permued_combo = "".join(permued_combo)
