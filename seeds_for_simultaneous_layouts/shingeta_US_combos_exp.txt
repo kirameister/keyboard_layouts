@@ -91,18 +91,9 @@ k3 ぅ
 k4 ぇ
 k5 ぉ
 l1 ゃ
-l2 みゃ
-l3 みゅ
-l4 みょ
 l5 ゎ
 i1 ゅ
-i2 びゃ
-i3 びゅ
-i4 びょ
 o1 ょ
-o2 ぴゃ
-o3 ぴゅ
-o4 ぴょ
 ### ANSI US 独自コンボ
 s7 でゅ
 s8 ゔぁ
@@ -124,6 +115,8 @@ fv !
 fb !
 nj ?
 ### Google IME に元々あったエントリーの流用
+z[ 『
+z] 』
 zd すか noperm
 dz かす noperm
 zh すく noperm
@@ -134,11 +127,34 @@ z. す。 noperm
 .z 。す noperm
 z/ すぶ noperm
 /z ぶす noperm
-z[ 『
-z] 』
 zdh ←
 zdj ↓
 zdk ↑
 zdl →
 zd. …
 zd/ ・
+### 元々上段の配列だったが、3 キー同時押しに持ってきた配列
+### l2 みゃ
+### l3 みゅ
+### l4 みょ
+### i2 びゃ
+### i3 びゅ
+### i4 びょ
+### o2 ぴゃ
+### o3 ぴゅ
+### o4 ぴょ
+io こが noperm
+oi がこ noperm
+ioz ぴゃ
+ioq ぴゅ
+ioa ぴょ
+ioc みゃ
+iow みゅ
+ioe みょ
+iov ぴゃ
+ior ぴゅ
+iof ぴょ
+### 元々新下駄配列では定義されていなかった組み合わせ
+iot でゅ
+iog ゔぁ
+iob ゔぃ
