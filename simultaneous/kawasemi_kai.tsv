@@ -525,7 +525,7 @@
 うr		づ
 でk		づ
 おr		ど
-でj		ど
+#でjど
 えr		で
 でh		で
 やr		ぢゃ
@@ -551,7 +551,7 @@
 っe	ぜん
 じn	ぜん
 あe		ざ
-じ;		ざ
+#じ;ざ
 いe		じ
 じl		じ
 うe		ず
@@ -615,7 +615,7 @@
 っq	ゑ
 にn	ゑ
 あq	ぁ
-に;	ぁ
+#に;ぁ
 いq	ぃ
 にl	ぃ
 うq	ぅ
@@ -673,7 +673,7 @@
 うv	…
 てk	…
 おv	・
-てj	・
+#てj・
 をv	〈〉
 てp	〈〉
 やv	【】
@@ -723,7 +723,7 @@
 あx		ら
 る;		ら
 いx		り
-るl		り
+#るlり
 うx		る
 るk		る
 おx		ろ
@@ -787,7 +787,7 @@
 いf		ち
 とl		ち
 うf		つ
-とk		つ
+#とkつ
 おf		と
 とj		と
 えf		て
@@ -821,7 +821,7 @@
 っd	せん
 しn	せん
 あd		さ
-し;		さ
+#し;さ
 いd		し
 しl		し
 うd		す
@@ -889,7 +889,7 @@
 いa		に
 のl		に
 うa		ぬ
-のk		ぬ
+#のkぬ
 おa		の
 のj		の
 えa		ね
@@ -936,3 +936,4 @@ u		よ
 a		の
 # set of the entries required for simultaneous key-combos..
 # original TSV file minus the entries in the pending..
+z	な
