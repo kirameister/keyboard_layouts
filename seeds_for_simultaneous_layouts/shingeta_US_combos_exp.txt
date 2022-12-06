@@ -151,9 +151,9 @@ ioa ぴょ
 ioc みゃ
 iow みゅ
 ioe みょ
-iov ぴゃ
-ior ぴゅ
-iof ぴょ
+iov びゃ
+ior びゅ
+iof びょ
 ### 元々新下駄配列では定義されていなかった組み合わせ
 iot でゅ
 iog ゔぁ
