@@ -1,3 +1,55 @@
+### [L(の)][Q(ぱ)] で濁音の後置シフト
+### かぱl	が
+### かのq	が
+### きぱl	ぎ
+### きのq	ぎ
+### くぱl	ぐ
+### くのq	ぐ
+### けぱl	げ
+### けのq	げ
+### こぱl	ご
+### このq	ご
+### さぱl	ざ
+### さのq	ざ
+### しぱl	じ
+### しのq	じ
+### すぱl	ず
+### すのq	ず
+### せぱl	ぜ
+### せのq	ぜ
+### そぱl	ぞ
+### そのq	ぞ
+### たぱl	だ
+### たのq	だ
+### ちぱl	ぢ
+### ちのq	ぢ
+### つぱl	づ
+### つのq	づ
+### てぱl	で
+### てのq	で
+### とぱl	ど
+### とのq	ど
+### はぱl	ば
+### はのq	ば
+### ひぱl	び
+### ひのq	び
+### ふぱl	ぶ
+### ふのq	ぶ
+### へぱl	べ
+### へのq	べ
+### ほぱl	ぼ
+### ほのq	ぼ
+### [S(か)][P(づ)] で半濁音の後置シフト
+### はかp	ぱ
+### はづs	ぱ
+### ひかp	ぴ
+### ひづs	ぴ
+### ふかp	ぷ
+### ふづs	ぷ
+### へかp	ぺ
+### へづs	ぺ
+### ほかp	ぽ
+### ほづs	ぽ
 ### [K]+ 静音シフト
 kq ぁ
 kw み
@@ -21,6 +73,7 @@ do ふ
 dp ゎ
 dh め
 dj わ
+dl じ
 d; ゆ
 dn ひ
 dm む
@@ -171,3 +224,59 @@ kl 」
 nk ￥
 m, ．
 ,. ｝
+### 以下濁音ならびに半濁音の入力のために必要なエントリー
+sq かぱ noperm
+;l きの noperm
+hl くの noperm
+hq くぱ noperm
+wq けぱ noperm
+eq こぱ noperm
+bq さぱ noperm
+dq しぱ noperm
+,l すの noperm
+,q すぱ noperm
+zq せぱ noperm
+dil その noperm
+idl その noperm
+diq そぱ noperm
+idq そぱ noperm
+gq たぱ noperm
+/l ちの noperm
+/q ちぱ noperm
+ol つの noperm
+rq てぱ noperm
+fq とぱ noperm
+aq はぱ noperm
+dnl ひの noperm
+ndl ひの noperm
+dnq ひぱ noperm
+ndq ひぱ noperm
+dol ふの noperm
+odl ふの noperm
+doq ふぱ noperm
+odq ふぱ noperm
+kcl への noperm
+ckl への noperm
+kcq へぱ noperm
+ckq へぱ noperm
+kvl ほの noperm
+vkl ほの noperm
+kvq ほぱ noperm
+vkq ほぱ noperm
+as はか noperm
+dns ひか noperm
+nds ひか noperm
+dnp ひづ noperm
+ndp ひづ noperm
+dos ふか noperm
+ods ふか noperm
+dop ふづ noperm
+odp ふづ noperm
+kcs へか noperm
+cks へか noperm
+kcp へづ noperm
+ckp へづ noperm
+kvs ほか noperm
+vks ほか noperm
+kvp ほづ noperm
+vkp ほづ noperm
