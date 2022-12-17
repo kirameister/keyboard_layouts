@@ -48,7 +48,7 @@
 * ローマ字の入力概念はそのままに、物理的なキーの位置を置き換える配列 ([大西配列](https://0414.works/hairetu/) や [Eucalyn 配列](https://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout)など)。
     * このような配列は、ハードウェア/ファームウェアまたは ([Karabiner-Elements](https://karabiner-elements.pqrs.org/) のような) key-code を置き換えるようなソリューションの方が (日本語の IME に閉じた形で実装されるよりも) 望ましいと判断した。
 * かな系の配列だが、同時打鍵の為のキーを親指を使って押すという設計になっている配列 ([薙刀式](http://oookaworks.seesaa.net/article/484704326.html) や [親指シフト](https://ja.wikipedia.org/wiki/%E8%A6%AA%E6%8C%87%E3%82%B7%E3%83%95%E3%83%88) など)。
-    * 現状 Google IME / mozc に閉じた形で同時打鍵配列を実現するには、`Z` や `X` のように文字が刻印された文字を入力するためのキーを使う必要がある。所謂 Mod-key と呼ばれるような (Alt や Shift キーなど) キーをひらがな文字の入力に使用することができないため、Google IME / mozc に閉じた形で親指シフトなどの配列を実装することができません。
+    * 現状 Google IME / mozc に閉じた形で同時打鍵配列を実現するには、`Z` や `X` のように文字が刻印された文字を入力するためのキーを使う必要がある。所謂 Mod-key と呼ばれるような (Alt や Shift キーなど) キーをひらがな文字の入力に使用することができないため、Google IME / mozc に閉じた形で親指シフトなどの配列を実装することはできない。
 * 
 
 
